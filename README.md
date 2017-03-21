@@ -1,2 +1,2 @@
 # Lab1
-Lab 1
+Mobilutveckling Lab 1 Google Maps till Telefon.
