@@ -16,10 +16,25 @@
   <button id="zoomOut" onclick="zoom(id)">-</button>
 
   <div id="panningButtons">
-    <button id="up" onclick="panning(id)"><i class="fa fa-arrow-up" aria-hidden="true"></i></button><p/>
-    <button id="left" onclick="panning(id)"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-    <button id="right" onclick="panning(id)"><i class="fa fa-arrow-right" aria-hidden="true"></i></button><p/>
-    <button id="down" onclick="panning(id)"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+    <table>
+      <tr>
+        <td>
+          <button id="up" onclick="panning(id)"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="left" onclick="panning(id)"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+          <button id="centre" onclick="panning(id)"><i class="fa fa-home" aria-hidden="true"></i></button>
+          <button id="right" onclick="panning(id)"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="down" onclick="panning(id)"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+        </td>
+      </tr>
+    </table>
   </div>
 
   </body>

@@ -1,8 +1,38 @@
 #map {
-        height: 50%;
-        width: 50%
+        height: 75%;
+        width: 100%;
       }
+
+button {
+	height: 15%;
+	width: 10%;
+}
       
 html, body {
         height: 100%;
       }
+
+p {
+	text-align:center;
+	position:relative;
+}
+
+table {
+	margin: auto;
+	width: 100%;
+	height: 50%;
+	vertical-align: middle;
+	text-align:center;
+	position:relative;
+}
+
+td {
+	margin: auto;
+	width: 100%;
+}
+
+tr {
+	margin: auto;
+	width: 100%;
+	height: 10%
+}

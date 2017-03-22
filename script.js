@@ -6,6 +6,7 @@ function initMap() {
 	  mapTypeId: 'satellite' //alt: 'roadmap', 'satellite', 'hybrid'
 	});
 	//map.setTilt(45); //DOESN'T WORK?
+	/*
 	marker = new google.maps.Marker({
           map: map,
           draggable: true,
@@ -13,14 +14,14 @@ function initMap() {
           position: {lat: 59.349796, lng: 18.070728}
         });
     marker.addListener('click', toggleBounce);
-
+	*/
     undragableMarker = new google.maps.Marker({
           map: map,
           draggable: false,
           animation: google.maps.Animation.DROP,
           position: {lat: 59.349796, lng: 18.072728}
         });
-    undragableMarker.addListener('click', toggleBounce);
+    //undragableMarker.addListener('click', toggleBounce);
 }
 
 function zoom(id) {
@@ -36,16 +37,21 @@ function panning(id) {
 	var lat = map.getCenter().lat();
 	var lng = map.getCenter().lng();
 	if (id === "left") {
-		lng = lng - 0.001;
+		lng -= 10 / Math.pow(2,map.getZoom());
 	}
 	else if (id === "right") {
-		lng = lng + 0.001
+		lng += 10 / Math.pow(2,map.getZoom());
 	}
 	else if (id === "up") {
-		lat = lat + 0.001;
+		lat += 10 / Math.pow(2,map.getZoom());
 	}
 	else if (id === "down") {
-		lat = lat - 0.001;
+		lat -= 10 / Math.pow(2,map.getZoom());
+	}
+	else if (id === "centre") {
+		lat -= (lat - 59.349796);
+		lng -= (lng - 18.072728);
+		map.setZoom(14);
 	};
 	map.setCenter({lat: lat, lng: lng}); 
 }
