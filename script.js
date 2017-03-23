@@ -1,9 +1,10 @@
+document.body.exitFullscreen();
 var map;
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
-	  center: {lat: 59.349796, lng: 18.070728},
+	  center: {lat: 59.349796, lng: 18.072728},
 	  zoom: 14,
-	  mapTypeId: 'satellite' //alt: 'roadmap', 'satellite', 'hybrid'
+	  mapTypeId: 'roadmap' //alt: 'roadmap', 'satellite', 'hybrid'
 	});
 	//map.setTilt(45); //DOESN'T WORK?
 	/*
