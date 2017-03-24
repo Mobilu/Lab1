@@ -63,6 +63,10 @@ function panning(id) {
 				lng = position.coords.longitude;
      			});
  		}
+		else{
+			lat = 59.349796;
+			lng = 18.074728;
+		}
 		//lat = 59.349796;
 		//lng = 18.072728;
 		map.setZoom(14);
