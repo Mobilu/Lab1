@@ -7,22 +7,20 @@ function initMap() {
 	  mapTypeId: 'satellite' //alt: 'roadmap', 'satellite', 'hybrid'
 	});
 	map.setTilt(0); //DOESN'T WORK?
-	/*
+	
 	marker = new google.maps.Marker({
           map: map,
           draggable: true,
-          animation: google.maps.Animation.DROP,
+          animation: google.maps.Animation.BOUNCE,
           position: {lat: 59.349796, lng: 18.070728}
         });
-    marker.addListener('click', toggleBounce);
-	*/
+	
     undragableMarker = new google.maps.Marker({
           map: map,
           draggable: false,
           animation: google.maps.Animation.DROP,
           position: {lat: 59.349796, lng: 18.072728}
         });
-    //undragableMarker.addListener('click', toggleBounce);
 }
 
 function zoom(id) {
