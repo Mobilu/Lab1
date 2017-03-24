@@ -21,6 +21,13 @@ function initMap() {
           animation: google.maps.Animation.DROP,
           position: {lat: 59.349796, lng: 18.072728}
         });
+    templeMarker = new google.maps.Marker({
+    	map: map,
+    	draggable: false,
+    	animation: google.maps.Animation.DROP,
+    	position: {lat: 16.79955056, lng: 96.149766},
+    	icon: 'buddha.png'
+    });
 }
 
 function zoom(id) {
@@ -62,6 +69,7 @@ function panning(id) {
          			//initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 				lat = position.coords.latitude;
 				lng = position.coords.longitude;
+				
      			});
  		}
 		else{
