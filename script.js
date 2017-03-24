@@ -44,31 +44,36 @@ function panning(id) {
 	var lng = map.getCenter().lng();
 	if (id === "left") {
 		lng -= 10 / Math.pow(2,map.getZoom());
+		map.setCenter({lat: lat, lng: lng});
 	}
 	else if (id === "right") {
 		lng += 10 / Math.pow(2,map.getZoom());
+		map.setCenter({lat: lat, lng: lng});
 	}
 	else if (id === "up") {
 		lat += 10 / Math.pow(2,map.getZoom());
+		map.setCenter({lat: lat, lng: lng});
 	}
 	else if (id === "down") {
 		lat -= 10 / Math.pow(2,map.getZoom());
+		map.setCenter({lat: lat, lng: lng});
 	}
 	else if (id === "P") {
 		lat = 16.798354;
 		lng = 96.149705;
+		map.setCenter({lat: lat, lng: lng});
 	}
 	else if (id === "J") {
 		lat = 59.325695;
 		lng = 18.071869;
+		map.setCenter({lat: lat, lng: lng});
 	}
 	else if (id === "centre") {
 		if (navigator.geolocation) {
 			map.setZoom(17);
      			navigator.geolocation.getCurrentPosition(function (position) {
-         			//initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-				lat = position.coords.latitude;
-				lng = position.coords.longitude;
+         			gpsLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				map.setCenter(gpsLocation);
 				
      			});
  		}
@@ -81,7 +86,7 @@ function panning(id) {
 		//lng = 18.072728;
 		
 	};
-	map.setCenter({lat: lat, lng: lng}); 
+	//map.setCenter({lat: lat, lng: lng}); 
 }
 var tiltBool = true;
 function tilt() {
