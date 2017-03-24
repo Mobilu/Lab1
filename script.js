@@ -2,10 +2,11 @@ var map;
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
 	  center: {lat: 59.349796, lng: 18.072728},
+	  disableDefaultUI: true,
 	  zoom: 14,
-	  mapTypeId: 'roadmap' //alt: 'roadmap', 'satellite', 'hybrid'
+	  mapTypeId: 'satellite' //alt: 'roadmap', 'satellite', 'hybrid'
 	});
-	//map.setTilt(45); //DOESN'T WORK?
+	map.setTilt(0); //DOESN'T WORK?
 	/*
 	marker = new google.maps.Marker({
           map: map,
@@ -54,5 +55,17 @@ function panning(id) {
 		map.setZoom(14);
 	};
 	map.setCenter({lat: lat, lng: lng}); 
+}
+var tiltBool = true;
+function tilt() {
+	if (tiltBool) {
+		map.setTilt(45);
+		tiltBool = false;
+	}
+	else {
+		map.setTilt(0);
+		tiltBool = true;
+	}
+	
 }
 
