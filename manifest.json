@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "short_name": "Mobilu",
   "name": "Johanna and Pers Mobilu Map App",
@@ -12,3 +13,19 @@
   "display": "standalone",
   "orientation": "portrait"
 }
+=======
+{
+  "short_name": "Mobilu",
+  "name": "Johanna and Pers Mobilu Map App",
+  "icons": [
+    {
+      "src": "test.png",
+      "sizes": "720x720",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}
+>>>>>>> origin/master

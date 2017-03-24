@@ -2,9 +2,12 @@ var map;
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
 	  center: {lat: 59.349796, lng: 18.072728},
+<<<<<<< HEAD
 	  disableDefaultUI: true,
+=======
+>>>>>>> origin/master
 	  zoom: 14,
-	  mapTypeId: 'satellite' //alt: 'roadmap', 'satellite', 'hybrid'
+	  mapTypeId: 'roadmap' //alt: 'roadmap', 'satellite', 'hybrid'
 	});
 	map.setTilt(0); //DOESN'T WORK?
 	/*
