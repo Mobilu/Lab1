@@ -47,9 +47,17 @@ function panning(id) {
 	else if (id === "down") {
 		lat -= 10 / Math.pow(2,map.getZoom());
 	}
+	else if (id === "P") {
+		lat = 16.798354;
+		lng = 96.149705;
+	}
+	else if (id === "J") {
+		lat = 59.325695;
+		lng = 18.071869;
+	}
 	else if (id === "centre") {
-		lat -= (lat - 59.349796);
-		lng -= (lng - 18.072728);
+		lat = 59.349796;
+		lng = 18.072728;
 		map.setZoom(14);
 	};
 	map.setCenter({lat: lat, lng: lng}); 
