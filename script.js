@@ -65,8 +65,8 @@ function panning(id) {
      			});
  		}
 		else{
-			lat = 59.349796;
-			lng = 18.074728;
+			lat = 59.325695;
+			lng = 18.071869;
 			map.setZoom(14);
 		}
 		//lat = 59.349796;
