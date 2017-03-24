@@ -10,6 +10,7 @@
   ],
   "start_url": "https://mobilu.github.io/Lab1/",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "theme_color": "#FFF"
 }
 
