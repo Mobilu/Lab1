@@ -56,8 +56,15 @@ function panning(id) {
 		lng = 18.071869;
 	}
 	else if (id === "centre") {
-		lat = 59.349796;
-		lng = 18.072728;
+		if (navigator.geolocation) {
+     			navigator.geolocation.getCurrentPosition(function (position) {
+         			//initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				lat = position.coords.latitude;
+				lng = position.coords.longitude;
+     			});
+ 		}
+		//lat = 59.349796;
+		//lng = 18.072728;
 		map.setZoom(14);
 	};
 	map.setCenter({lat: lat, lng: lng}); 
