@@ -57,6 +57,7 @@ function panning(id) {
 	}
 	else if (id === "centre") {
 		if (navigator.geolocation) {
+			map.setZoom(17);
      			navigator.geolocation.getCurrentPosition(function (position) {
          			//initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 				lat = position.coords.latitude;
@@ -66,10 +67,11 @@ function panning(id) {
 		else{
 			lat = 59.349796;
 			lng = 18.074728;
+			map.setZoom(14);
 		}
 		//lat = 59.349796;
 		//lng = 18.072728;
-		map.setZoom(14);
+		
 	};
 	map.setCenter({lat: lat, lng: lng}); 
 }
